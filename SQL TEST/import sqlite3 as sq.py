@@ -18,6 +18,8 @@ def main():
 
         c.execute('INSERT INTO name VALUES (?,?,?,?,?)', (line.split(',')))
 
+    c.execute('DELETE FROM name WHERE Fornavn = "fname"')
+
     conn.commit()
 
     c.execute('SELECT * FROM name')
